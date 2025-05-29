@@ -1,0 +1,344 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 3em var(--light-orange));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+h1 {
+  margin: 1rem auto;
+}
+
+.high-light {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.high-light:hover {
+  filter: drop-shadow(0 0 2em var(--light-blue));
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.todo-image {
+  width: 25rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.img-show {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  img,
+  .icon {
+    color: var(--orange);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+  }
+}
+
+.img-show:hover {
+  gap: 0.5rem;
+
+  img,
+  .icon {
+    width: auto;
+    height: 1rem;
+    opacity: 1;
+  }
+}
+
+.home-container {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  gap: 1rem;
+  padding: 2rem;
+
+  textarea {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 0.5rem;
+    /* border-radius: 0.5rem; */
+    width: 100%;
+    transition: box-shadow 0.2s ease;
+
+    &:focus {
+      box-shadow: inset 0 0 0.2rem var(--light-blue);
+    }
+  }
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: var(--black);
+  background-color: var(--white);
+  max-width: 300px;
+
+  .todo-header {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    width: 100%;
+
+    background-color: var(--white);
+    border-radius: 1rem;
+
+    svg {
+      font-size: 2rem;
+      color: var(--blue);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: left;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  #todo-list-container {
+    width: 100%;
+  }
+
+  .todo-table-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    min-width: 0;
+
+    &:hover,
+    &.active {
+      background-color: var(--light-blue);
+      cursor: pointer;
+    }
+
+    svg {
+      font-size: 1.5rem;
+      color: var(--blue);
+    }
+
+    .body {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-align: left;
+      color: var(--dark-blue);
+
+      > div {
+        display: flex;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        align-items: center;
+        gap: 0.2rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      svg {
+        font-size: 0.3rem;
+        color: gray;
+        flex-shrink: 0;
+      }
+
+      > div > p {
+        flex-shrink: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-left: auto;
+        margin: 0;
+        font-size: 0.8rem;
+        color: gray;
+        text-align: right;
+      }
+
+      p.description {
+        flex-shrink: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        font-size: 0.8rem;
+        color: gray;
+      }
+    }
+
+    .activity {
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+.todo-preview {
+  display: flex;
+  flex: 1;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: var(--black);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+  .todo-header {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    width: 100%;
+
+    background-color: var(--white);
+    border-radius: 1rem;
+
+    svg {
+      font-size: 2rem;
+      color: var(--blue);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: left;
+      margin: 0;
+      width: 100%;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0rem;
+    }
+
+    .pin-btn,
+    .delete-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: auto;
+      outline: none;
+      padding: 0.2rem;
+
+      svg {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .todo-activities {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .todo-activity-list {
+    width: 100%;
+
+    .todo-activity-item {
+      display: flex;
+      width: 100%;
+      align-items: start;
+      gap: 1rem;
+      padding: 0.5rem;
+
+      /* .activity-name-textarea {
+        width: 100%;
+        min-height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        border: 1px solid #ccc;
+        border-radius: 0.3rem;
+        padding: 0.2rem 0.4rem;
+        box-sizing: border-box;
+        font-family: inherit;
+        overflow-wrap: break-word;
+        white-space: normal;
+      } */
+
+      .activity-remove-btn {
+        background: none;
+        border: none;
+        color: gray;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        outline: none;
+        transition: color 0.2s ease;
+        padding: 0;
+        margin: 0.5rem auto;
+
+        &:hover {
+          color: darkred;
+        }
+      }
+    }
+  }
+}
