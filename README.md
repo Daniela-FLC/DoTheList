@@ -1,12 +1,20 @@
-# React + Vite
+# Do The List (Simple Todo List App)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vercel Deployment: https://do-the-list.vercel.app/
 
-Currently, two official plugins are available:
+Developed by: Cinco, Daniela Faith
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Subject: IT ELECTIVE 2 (WEB SYSTEM AND TECHNOLOGIES 2) (ITEC 106A)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add todo list.
+- Set Name and Description of todo list.
+- Pinned and delete todo list.
+- Add activities in todo list.
+- Mark as done and remove activities.
+- Change activity input.
+- Responsive
+  - Show only the Todo List Menu when no selected todo list.
+  - Selecting todo list will hide Todo List Menu and show Todo Preview.
+  - Todo Preview will display back button to return to Todo List Menu.
