@@ -20,7 +20,7 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 3em var(--light-orange));
+  filter: drop-shadow(0 0 3em var(--white));
 }
 
 /* Header */
@@ -35,7 +35,7 @@ h1 {
 }
 
 .high-light:hover {
-  filter: drop-shadow(0 0 2em var(--light-blue));
+  filter: drop-shadow(0 0 2em var(--blue));
   cursor: pointer;
 }
 
@@ -62,7 +62,7 @@ h1 {
 
 .img-show img,
 .img-show .icon {
-  color: var(--orange);
+  color: var(--lapiz);
   width: 0;
   height: 0;
   opacity: 0;
@@ -134,7 +134,7 @@ h1 {
 
 .todo-list .todo-header svg {
   font-size: 2rem;
-  color: var(--blue);
+  color: var(--lapiz);
 }
 
 .todo-list .todo-header h1 {
@@ -198,7 +198,7 @@ button {
 
 .todo-table-item svg {
   font-size: 1.5rem;
-  color: var(--blue);
+  color: var(--lapiz);
 }
 
 /* Todo Item Body */
@@ -294,7 +294,7 @@ button {
 
 .todo-preview .todo-header svg {
   font-size: 1.2rem;
-  color: var(--blue);
+  color: var(--lapiz);
 }
 
 .todo-preview .todo-header div {

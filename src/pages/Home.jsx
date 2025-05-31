@@ -366,7 +366,7 @@ export default function Home() {
               zIndex: 2,
             }}
           >
-            <FaPlus size={20} />
+            <FaPlus color={Colors.blue} size={20} />
           </button>
         </div>
         <div id="todo-list-container">{todoListContent}</div>
@@ -379,7 +379,7 @@ export default function Home() {
             width: 350,
             height: 350,
             borderRadius: "50%",
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.lapiz,
             zIndex: 0,
             filter: "blur(50px)",
           }}
@@ -483,13 +483,13 @@ export default function Home() {
                 <div>
                   <button className="pin-btn" onClick={togglePin}>
                     {todoList[activeTodo]?.pinned ? (
-                      <FaStar color="gold" />
+                      <FaStar color="gold" size={20} />
                     ) : (
-                      <FaRegStar />
+                      <FaRegStar color="gold" size={20} />
                     )}
                   </button>
                   <button className="delete-btn" onClick={removeTodo}>
-                    <FaTrash color={Colors.orange} />
+                    <FaTrash color={"darkred"} size={17} />
                   </button>
                 </div>
               </div>
@@ -571,7 +571,7 @@ export default function Home() {
             width: 400,
             height: 400,
             borderRadius: "50%",
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.lapiz,
             zIndex: 0,
             filter: "blur(50px)",
           }}
